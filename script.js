@@ -1,135 +1,72 @@
-// function sayhello() {
-//     alert('hello world');
-// }
+// iF ELSE Statements in javascript
 
-// what is variable
-// 1. var
-// 2. let
-// 3.const
+// topic: Basic If statements
+let age = 18;
 
-// 1.var
+if (age >= 18) {
+  console.log("you can vote!");
+}
 
-var number = 123;
+// here, javascript checks the condition age>=18.
+// if it's true, it runs the code inside the {}.
 
-// syntax
-// variable variableName = value
+// topic: If else statement
+let age2 = 16;
 
-// 2. let
-let hi = 456;
+if (age2 >= 18) {
+  console.log("you can vote!");
+} else {
+  console.log("sorry, you're too young to vote.");
+}
+// if the condition is false, it jumps top the else block.
 
-// 3. const
-const okay = 789;
+// topic: Else if statement
+let score = 85;
 
-// declare / declaration
-// initialize / intialization
+if (score >= 90) {
+  console.log("grade A");
+} else if (score >= 80) {
+  console.log("grade B");
+} else {
+  console.log("keep trying");
+}
+// use else if when you have more than two conditions.
 
-//declare
-let person;
+// mini practise
+let temperature = 30;
 
-//initialize
-person = "biswash";
+// conditions
+//if temperature greater than 40, It's too hot
+// if temperature less than 10, it's freezing
+//otherwise weather looks nice
 
-// let person = "biswash" decleration + initialization
+if (temperature > 40) {
+  console.log("its too hot");
+} else if (temperature < 10) {
+  console.log("its freezing");
+} else {
+  console.log("weather looks nice");
+}
 
-//const = constant
+// IMPORTANT TIP
+//Always use comparison operators inside conditions
 
-let surname = "khanal";
-surname = "gurung";
+// operator        meaning
+// >               greater than
+// <               less than
+// >=              greater than or equal to
+// <=              less than or equal to
+// ===             equal in value & type
+// !==             not equal in value & type
 
-// console.log(surname);
+// BONUS: using ig inside a function
 
-// naming rules for java script variables.
+function checklogin(isloggedIN) {
+  if (isloggedIN) {
+    console.log("Welcome Back");
+  } else {
+    console.log("please log in ");
+  }
+}
 
-// 1. can contain letters, digits, underscore and dollar signs.
-// eg: person, person123, _person and $person.
-
-// 2. must start from letter or  _ or $ but not a from a number.
-// eg: 123person  (not allowed)
-
-// 3. case sensitive (person and Person are different)
-
-// 4. cannot be a reserved keyword like let, class, return etc.
-
-// Data types
-
-// 1. string
-let city = "pokhara";
-let message = "hello, pokhara! ";
-
-// backticks
-let greeting = `good morning ${city}`;
-
-// 2. number
-//integer
-let age = 30;
-//decimal
-let price1 = 99.99;
-
-// 3. Boolean
-let isOnline = false;
-let isDarkmode = true;
-
-// 4. undefined
-let country;
-//  console.log(country)
-
-// 5. null
-let selectedcolor = null;
-
-//  console.log(selectedcolor)
-
-// 6. Object
-let person2 = {
-  name: "ram",
-  age: 30,
-  isstudent: false,
-};
-
-//  console.log(person2)
-
-// Operators
-
-// 1. arithmetic operators
-let a = 10;
-let b = 20;
-
-// console.log(a+b);
-// console.log(a-b);
-// console.log(a*b);
-// console.log(a/b);
-// console.log(a%b)
-
-// 2. assignment operators
-
-let x = 5;
-x += 5; // x = x+5
-x -= 5; // x = x-5
-x *= 5; // x = x*5
-
-// console.log(x)
-
-// 3. comparison operators
-
-// console.log(5 == "5") // true (loose equality)
-// console.log(5 === "5") // false (strict equality)
-// console.log(5 != 4);   // not equals to
-// console.log(10 > 5);
-// console.log(3 <= 3);  // less than equal to
-
-// Bonus tip
-// == compares values, === compares both values and data types.
-
-// 4. Logical Operators
-let isLoggedIn = true;
-let isAdmin = false;
-
-console.log(isLoggedIn && isAdmin); // AND OPERATORS  (both must be true)
-console.log(isLoggedIn || isAdmin); // or operator  (atleat one must be true)
-console.log(!isLoggedIn); // not (flips the value)
-
-// mini practise challenge
-let amount = 100;
-let tax = 0.1;
-
-let total = amount + amount * tax;
-console.log("total amount = ", total);
+checklogin(true);
