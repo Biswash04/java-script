@@ -1,135 +1,59 @@
-// function sayhello() {
-//     alert('hello world');
-// }
+// Javascript objects
 
-// what is variable
-// 1. var
-// 2. let
-// 3.const
+// what is object ?
+// An object is the way to store related data together
+// in a single variable using keyt-value pairs
 
-// 1.var
-
-var number = 123;
-
-// syntax
-// variable variableName = value
-
-// 2. let
-let hi = 456;
-
-// 3. const
-const okay = 789;
-
-// declare / declaration
-// initialize / intialization
-
-//declare
-let person;
-
-//initialize
-person = "biswash";
-
-// let person = "biswash" decleration + initialization
-
-//const = constant
-
-let surname = "khanal";
-surname = "gurung";
-
-// console.log(surname);
-
-// naming rules for java script variables.
-
-// 1. can contain letters, digits, underscore and dollar signs.
-// eg: person, person123, _person and $person.
-
-// 2. must start from letter or  _ or $ but not a from a number.
-// eg: 123person  (not allowed)
-
-// 3. case sensitive (person and Person are different)
-
-// 4. cannot be a reserved keyword like let, class, return etc.
-
-// Data types
-
-// 1. string
-let city = "pokhara";
-let message = "hello, pokhara! ";
-
-// backticks
-let greeting = `good morning ${city}`;
-
-// 2. number
-//integer
-let age = 30;
-//decimal
-let price1 = 99.99;
-
-// 3. Boolean
-let isOnline = false;
-let isDarkmode = true;
-
-// 4. undefined
-let country;
-//  console.log(country)
-
-// 5. null
-let selectedcolor = null;
-
-//  console.log(selectedcolor)
-
-// 6. Object
-let person2 = {
+let person = {
   name: "ram",
-  age: 30,
-  isstudent: false,
+  age: 25,
+  isStudent: true,
+  hobbies: ["cycling", "music", "fotball"],
+  company: {
+    name: "company name",
+    location: "pokhara",
+  },
 };
 
-//  console.log(person2)
+// key value pair
+// keys (also called properties) are like labels (eg: "name" "age")
+// - values can be anything: strings, numbers, booleans, arrays, even other objects
 
-// Operators
+// accesing objects values
+// console.log(person.age);
 
-// 1. arithmetic operators
-let a = 10;
-let b = 20;
+// adding or updating properties
 
-// console.log(a+b);
-// console.log(a-b);
-// console.log(a*b);
-// console.log(a/b);
-// console.log(a%b)
+person.age = 30; // update value
 
-// 2. assignment operators
+person.city = "pokhara"; // add new property
 
-let x = 5;
-x += 5; // x = x+5
-x -= 5; // x = x-5
-x *= 5; // x = x*5
+// console.log(person);
 
-// console.log(x)
+// deleting properties
 
-// 3. comparison operators
+delete person.age;
 
-// console.log(5 == "5") // true (loose equality)
-// console.log(5 === "5") // false (strict equality)
-// console.log(5 != 4);   // not equals to
-// console.log(10 > 5);
-// console.log(3 <= 3);  // less than equal to
+// console.log(person);
 
-// Bonus tip
-// == compares values, === compares both values and data types.
+// looping through an object
 
-// 4. Logical Operators
-let isLoggedIn = true;
-let isAdmin = false;
+for (let key in person) {
+  console.log(key, "-", person[key]);
+}
 
-console.log(isLoggedIn && isAdmin); // AND OPERATORS  (both must be true)
-console.log(isLoggedIn || isAdmin); // or operator  (atleat one must be true)
-console.log(!isLoggedIn); // not (flips the value)
+// objects inside array
+// you can store multiple objects in an array - super useful
 
-// mini practise challenge
-let amount = 100;
-let tax = 0.1;
+let users = [
+  {
+    name: "ram",
+    age: 25,
+  },
+  {
+    name: "sita",
+    age: 22,
+  },
+];
 
-let total = amount + amount * tax;
-console.log("total amount = ", total);
+console.log(users[0].name);
