@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .calculator {
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            width:90%; 
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
     <script src="script.js"> </script>
 </head>
 <body>
-    <!-- <button onclick="sayhello()"> click </button> -->
+    <div class="calculator">
+        <input type="text" id="num1" placeholder="enter first number">
+        <input type="text" id="num2" placeholder="enter second number">
+
+        <button onclick="add()"> Add </button>
+        <button onclick="subtract()"> Subtract </button>
+        <button onclick="multiply()"> Multiply </button>
+        <button onclick="divide()"> Divide </button>
+    
+<p id="result"> Result: </p>
+    </div>
 </body>
 </html>
