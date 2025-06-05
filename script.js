@@ -16,3 +16,17 @@ title.style.color = "white";
 
 // HOMEWORK
 // do it in Button click
+//  <i class="fa fa-times" onclick="hidemenu()"></i>
+const button = document.getElementById("change-btn");
+
+button.onclick = function () {
+  const mainTitle = document.getElementById("main-title");
+
+  mainTitle.style.backgroundColor = "orange";
+};
+
+button.onclick = function () {
+  const mainTitle = document.getElementById("message");
+
+  message.innerHTML = "<strong> You clicked button </strong>";
+};
